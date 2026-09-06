@@ -1,0 +1,3 @@
+ALTER TABLE public.attendance ADD CONSTRAINT attendance_attendee_id_fkey FOREIGN KEY (attendee_id) REFERENCES public.profiles(id) ON DELETE CASCADE;
+ALTER TABLE public.tickets ADD CONSTRAINT tickets_attendee_id_fkey FOREIGN KEY (attendee_id) REFERENCES public.profiles(id) ON DELETE CASCADE;
+ALTER TABLE public.events ADD CONSTRAINT events_organizer_id_fkey FOREIGN KEY (organizer_id) REFERENCES public.profiles(id) ON DELETE CASCADE;
